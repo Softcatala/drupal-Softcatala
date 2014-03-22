@@ -111,13 +111,7 @@ if (!$is_front && !preg_match('/destination\=taxonomy/', $destination)) { ?>
     	</div>
     <? } ?>
     <!--f block foto -->
-   <!--i block publicitat -->
-    <!--i anuncios google -->
-    <div class="boxtit2">Publicitat</div> 
-<script type='text/javascript'><!--// <![CDATA[
-    /* [id9] Softcatalà - Notícia Requadre */
-    OA_show(9);
-// ]]> --></script><noscript><a target='_blank' href='http://ad.softcatala.org/www/delivery/ck.php?n=7eca3a4'><img border='0' alt='' src='http://ad.softcatala.org/www/delivery/avw.php?zoneid=9&amp;n=7eca3a4' /></a></noscript>    
+<!--# include virtual="/ssi/ads/noticia-requadre-lateral.html" -->
 <!--F GRID280 -->
     </div>
 <?php } ?>
