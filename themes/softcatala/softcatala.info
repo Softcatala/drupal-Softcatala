@@ -1,0 +1,14 @@
+name = Softcatalà
+description = Tema del nou lloc web de Softcatalà
+version = VERSION
+core = 6.x
+engine = phptemplate
+stylesheets[all][] = sc.css
+stylesheets[all][] = style.css
+stylesheets[print][] = print.css
+
+; Information added by drupal.org packaging script on 2008-08-14
+version = "6.4"
+project = "drupal"
+datestamp = "1218672610"
+

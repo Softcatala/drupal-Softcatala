@@ -1,0 +1,126 @@
+<?php
+// $Id: node.tpl.php,v 1.5 2007/10/11 09:51:29 goba Exp $
+?>
+<div id="node-<?php print $node->nid; ?>" class="node<?php if ($sticky) { print ' sticky'; } ?><?php if (!$status) { print ' node-unpublished'; } ?><?php $destination = drupal_get_destination(); if (!preg_match('/destination\=taxonomy/', $destination) ) {print ' cosnoticia'; }?>">
+
+<?php print $picture ?>
+
+<?php if ($page == 0): ?>
+  <h2><a href="<?php print $node_url ?>" title="<?php print $title ?>"><?php print $title ?></a></h2>
+<?php endif; ?>
+
+  <?php if ($submitted): ?>
+   <?php if ($node->uid > 0) { ?>
+    <span class="submitted font12 verdanya grey2"><?php print $submitted; ?></span>
+   <?php } ?>
+   <?php if ($node->uid < 1) { ?>
+    <span class="submitted font12 verdanya grey2">Publicat per <?php print content_format('field_font', $field_font[0]) ?> (<?php 
+$email = $field_contacte[0]['email'];
+$canvis = array ("@", ".");
+$nous = array (" <em>arrova</em> ", " <em>punt</em> ");
+$correu = str_replace($canvis, $nous, $email);
+print $correu ?>) el <?php print format_date($node->created) ?></span>
+   <?php } ?>
+      <?php if ($taxonomy): ?>
+                <div class="terms"><?php print $terms ?></div>
+      <?php endif;?>
+  <?php endif; ?>
+
+<?php 
+$destination = drupal_get_destination();
+$arraynodes = array(1, 2, 3, 4, 5);
+if (!$is_front && !preg_match('/destination\=taxonomy/', $destination) && !in_array($node->nid, $arraynodes))  : 
+if ($title): print '<h1'. ($tabs ? ' class="with-tabs"' : '') .'>'. $title .'</h1>'; endif;
+if ($links): print '
+        <div class="links">'. $links . '</div>
+	<div class="lin5 postop_10">
+	<img longdesc="Separador de categories" alt="Softcatalà" src="/img/shim.gif"/>
+	</div>'; endif;
+endif; ?>
+
+
+<div class="content clear-block story-block">
+
+<?php 
+
+if ($is_front) { ?>
+
+<div class="textoact">
+<?php print_r($node->content['body']['#value']); ?>
+</div>
+<?php if (!preg_match('/^\s*$/', $field_mini[0]['value'])) {?>
+<div class="imgnotihomediv">
+    <img src="<?php print content_format('field_mini', $field_mini[0]) ?>" alt="<?php print content_format('field_minitxt', $field_minitxt[0]) ?>" title="<?php print content_format('field_minitxt', $field_minitxt[0]) ?>" class="imgnotihome" />
+</div>
+<?php } ?>
+
+
+<?php } ?>
+
+
+<?php
+$destination = drupal_get_destination();
+
+if (preg_match('/destination\=taxonomy/', $destination)) { ?>
+
+<div class="textoact3">
+<?php print_r($node->content['body']['#value']); ?>
+</div>
+<?php if (!preg_match('/^\s*$/', $field_mini[0]['value'])) {?>
+<div class="imgnotihomediv">
+    <img src="<?php print content_format('field_mini', $field_mini[0]) ?>" alt="<?php print content_format('field_minitxt', $field_minitxt[0]) ?>" title="<?php print content_format('field_minitxt', $field_minitxt[0]) ?>" class="imgnotihome" />
+</div>
+<?php } ?>
+
+
+<?php } ?>
+
+
+
+<?php 
+$destination = drupal_get_destination();
+
+if (!$is_front && !preg_match('/destination\=taxonomy/', $destination)) { ?>
+  
+  <div class="textoact2">
+  <?php print_r($node->content['body']['#value']); ?>
+  </div>
+
+    <!--I GRID280 -->
+    <div class="lateralnoticia">
+    <!--i block foto -->
+    <?php if (!preg_match('/^\s*$/', $field_imatge[0][value])) {?>
+    	<div class="fotonot">
+    	<img src="<?php print content_format('field_imatge', $field_imatge[0]) ?>" alt="<?php print content_format('field_imatgetxt', $field_imatgetxt[0]) ?>" longdesc="Imatge de la notícia" title="<?php print content_format('field_imatgetxt', $field_imatgetxt[0]) ?>" class="bzero"/>
+    	<?php if (!preg_match('/^\s*$/', $field_llegenda[0][value])) {echo "<p>"; print content_format('field_llegenda', $field_llegenda[0]); echo "</p>";} ?>
+    	</div>
+    <? } ?>
+    <!--f block foto -->
+    <!--i block publicitat -->
+    <!--i anuncios google -->
+    
+    <script type="text/javascript"><!--
+    google_ad_client = "pub-5137971297629213";
+    /* noticia_nou */
+    google_ad_slot = "1052143446";
+    google_ad_width = 200;
+    google_ad_height = 200;
+    //-->
+    </script>
+    <script type="text/javascript"
+    src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+    </script>
+    <!--F GRID280 -->
+    </div>
+<?php } ?>
+
+</div>
+<br class="clearfloat" />
+<?php 
+$destination = drupal_get_destination();
+if ($is_front || preg_match('/destination\=taxonomy/', $destination)) :
+if ($links): print '<div class="links">'.$links.'</div>'; 
+endif;
+endif; ?>
+  
+</div>
