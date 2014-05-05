@@ -29,6 +29,8 @@ header('Location: http://www.softcatala.org/m/traductor');
     <!--[if IE 7]>
           <link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/softcatala/fix-ie7.css" />
     <![endif]-->
+<script type="text/javascript" src="/js/cookies/jquery.cookie.js"></script>
+<script type="text/javascript" src="/js/cookies/jquery.cookiecuttr.js"></script>
 <script type="text/javascript" src="/js/softcatala.js"></script>
 <link rel="search" type="application/opensearchdescription+xml" title="Softcatalà" href="/softcatala.xml" />
 <script type='text/javascript' src='http://ad.softcatala.org/www/delivery/spcjs.php?id=1'></script>
