@@ -703,7 +703,7 @@ margin-right:7px;
 .boxvoleu p {font-family:Verdana;font-size:11px;color:#282828;width:55%;padding-left:10px;}
 
 /** Actualitat **/
-.boxactualitat1{width:97%;height:100px;float:left;background-repeat:repeat-x;padding:0;}
+.boxactualitat1{width:97%;height:100px;float:left;background-repeat:repeat-x;padding:0;margin-top:2.5em;}
 
 .boxactualitat2{width:100%;height:100px;float:right;background-image:url(/img/fonshome_actualitat.png);background-repeat:no-repeat;background-position:right;margin:0;padding:0;}
 
