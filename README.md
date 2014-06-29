@@ -11,7 +11,6 @@ MODULE	Available in 7	URL	Comment
 * admin_menu	yes	https://drupal.org/project/admin_menu
 * aggregation	no	https://drupal.org/project/aggregation
 * calendar	yes	https://drupal.org/project/calendar
-* captcha	yes	https://drupal.org/project/captcha
 * cck	yes/no	https://drupal.org/project/cck	Should be in core and other modules
 * cleaner	yes	https://drupal.org/project/cleaner	Not stable!
 * commentcloser	yes	https://drupal.org/project/commentcloser	Not stable! Check other ways to do it
@@ -41,3 +40,11 @@ MODULE	Available in 7	URL	Comment
 * views	yes	https://drupal.org/project/views
 * wysiwyg	yes	https://drupal.org/project/wysiwyg
 * xmlsitemap	yes	https://drupal.org/project/xmlsitemap
+
+## Problems encountered in update to 7
+* mollom
+  Cannot change the definition of field <em class="placeholder">mollom</em>.<em class="placeholder">session</em>: field doesn't exist.
+  7008 -   Rename {mollom}.did to .id, and {mollom}.session to .session_id. 
+* service_links
+  SQLSTATE[42S22]: Column not found: 1054 Unknown column 'service_links_show_' in 'where clause' 
+
