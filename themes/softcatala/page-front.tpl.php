@@ -16,7 +16,7 @@
 <script type="text/javascript" src="/js/cookies/jquery.cookiecuttr.js"></script>
 <script type="text/javascript" src="/js/softcatala.js"></script>
 <link rel="search" type="application/opensearchdescription+xml" title="Softcatalà" href="/softcatala.xml" />
-<script type='text/javascript' src='http://ad.softcatala.org/www/delivery/spcjs.php?id=1'></script>
+<script type='text/javascript' src='https://ad.softcatala.org/www/delivery/spcjs.php?id=1'></script>
 <link href="/css/cookies/cookiecuttr.css" rel="stylesheet" type="text/css" />
 <link rel="alternate" type="application/rss+xml" title="Softcatalà - RSS de comentaris" href="/comentaris.xml" />
 <link rel="image_src" href="http://www.softcatala.org/imatges/noticies/softcatala.png" />
