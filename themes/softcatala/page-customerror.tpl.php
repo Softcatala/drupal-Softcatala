@@ -15,7 +15,7 @@
 <script type="text/javascript" src="/js/softcatala.js"></script>
 <meta name="keywords" content="software, programari, català, valencià, catalan, valencian, catalán, valenciano" />
 <link rel="search" type="application/opensearchdescription+xml" title="Softcatalà" href="/softcatala.xml" />
-<script type='text/javascript' src='https://ad.softcatala.org/www/delivery/spcjs.php?id=1'></script>
+<!--# include virtual="/ssi/ad.html" -->
 </head>
   <body class="thrColHybHdr fondo7">
 

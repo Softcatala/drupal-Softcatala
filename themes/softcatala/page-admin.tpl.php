@@ -13,7 +13,7 @@
 
 <link rel="icon" type="image/png" href="/img/favicon.png" />
 <link rel="search" type="application/opensearchdescription+xml" title="Softcatalà" href="/softcatala.xml" />
-<script type='text/javascript' src='https://ad.softcatala.org/www/delivery/spcjs.php?id=1'></script>  
+<!--# include virtual="/ssi/ad.html" -->  
 </head>
   <body class="thrColHybHdr fondo3">
 
